@@ -4,23 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Medication review Form</title> 
+    <title>Medication Review Form</title> 
 </head>
 <body>
 
     <div class="container">
-        <h2>Contact Us</h2>
+        <h2>Medical Review Form</h2>
         <form action="submit.php" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            
+            <div class="section">
+                <h3>Master Data</h3>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+                <label for="gender">Gender:</label>
+                <input type="text" id="gender" name="gender">
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+                <label for="dob">Date of Birth:</label>
+                <input type="text" id="dob" name="dob">
 
-            <button type="submit">Send</button>
+                <label for="contact">Contact:</label>
+                <input type="text" id="contact" name="contact">
+            </div>
+
+            <div class="section">
+                <h3>Health Data</h3>
+                <label for="reason">Reason(s) for the review:</label>
+                <input type="text" id="reason" name="reason">
+
+                <label for="concerns">Concerns:</label>
+                <input type="text" id="concerns" name="concerns">
+
+                <label for="height">Height:</label>
+                <input type="text" id="height" name="height">
+
+                <label for="weight">Weight:</label>
+                <input type="text" id="weight" name="weight">
+
+                <label for="allergies">Allergies/Intolerances:</label>
+                <input type="text" id="allergies" name="allergies">
+
+                <label for="conditions">Conditions:</label>
+                <input type="text" id="conditions" name="conditions">
+
+                <label for="renal">Renal/Hepatic Insufficiency:</label>
+                <input type="text" id="renal" name="renal">
+
+                <label for="doctors">Multiple Doctors:</label>
+                <input type="text" id="doctors" name="doctors">
+
+                <label for="mediplan">Medication Plan:</label>
+                <input type="text" id="mediplan" name="mediplan">
+
+                <label for="info">Sufficiently Informed:</label>
+                <input type="text" id="info" name="info">
+
+                <label for="support">Support:</label>
+                <input type="text" id="support" name="support">
+
+                <label for="food">Food:</label>
+                <input type="text" id="food" name="food">
+            </div>
+
+            <div class="section">
+                <h3>Medication</h3>
+                <label for="med_name">Name:</label>
+                <input type="text" id="med_name" name="med_name">
+
+                <label for="med_strength">Strength:</label>
+                <input type="text" id="med_strength" name="med_strength">
+
+                <label for="med_dose">Time and Dose:</label>
+                <input type="text" id="med_dose" name="med_dose">
+
+                <label for="med_meal">Intake with Meal:</label>
+                <input type="text" id="med_meal" name="med_meal">
+
+                <label for="med_time">Intake Time:</label>
+                <input type="text" id="med_time" name="med_time">
+
+                <label for="med_indication">Indication:</label>
+                <input type="text" id="med_indication" name="med_indication">
+
+                <label for="med_prescription">Intake as Prescribed:</label>
+                <input type="text" id="med_prescription" name="med_prescription">
+
+                <label for="med_forgotten">Forgotten Intake:</label>
+                <input type="text" id="med_forgotten" name="med_forgotten">
+
+                <label for="med_effectiveness">Effectiveness:</label>
+                <input type="text" id="med_effectiveness" name="med_effectiveness">
+
+                <label for="med_problems">Problems or Comments:</label>
+                <input type="text" id="med_problems" name="med_problems">
+
+                <label for="med_storage">Storage:</label>
+                <input type="text" id="med_storage" name="med_storage">
+            </div>
+
+            <div class="section">
+                <h3>OTC Medication</h3>
+                <label for="otc_name">Name:</label>
+                <input type="text" id="otc_name" name="otc_name">
+
+                <label for="otc_strength">Strength:</label>
+                <input type="text" id="otc_strength" name="otc_strength">
+
+                <label for="otc_dose">Time and Dose:</label>
+                <input type="text" id="otc_dose" name="otc_dose">
+
+                <label for="otc_meal">Intake with Meal:</label>
+                <input type="text" id="otc_meal" name="otc_meal">
+
+                <label for="otc_time">Intake Time:</label>
+                <input type="text" id="otc_time" name="otc_time">
+
+                <label for="otc_indication">Indication:</label>
+                <input type="text" id="otc_indication" name="otc_indication">
+
+                <label for="otc_effectiveness">Effectiveness:</label>
+                <input type="text" id="otc_effectiveness" name="otc_effectiveness">
+
+                <label for="otc_problems">Problems or Comments:</label>
+                <input type="text" id="otc_problems" name="otc_problems">
+
+                <label for="otc_storage">Storage:</label>
+                <input type="text" id="otc_storage" name="otc_storage">
+
+                <label for="otc_recommendation">Recommendation:</label>
+                <input type="text" id="otc_recommendation" name="otc_recommendation">
+            </div>
+
+            <button type="submit">Confirm</button>
         </form>
     </div>
 
