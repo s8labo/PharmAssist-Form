@@ -14,28 +14,51 @@
             
             <div class="section">
                 <h3>Master Data</h3>
-                <label for="name">Name:</label>
+                <label for="name">First and lastname:</label>
                 <input type="text" id="name" name="name">
 
-                <label for="gender">Gender:</label>
-                <select id="gender" name="gender">
-                    <option value="">-- Select --</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                </select>
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
 
                 <label for="dob">Date of Birth:</label>
                 <input type="date" id="dob" name="dob">
 
-                <label for="contact">Contact:</label>
+                <label for="contact">Please provide an email or phone number:</label>
                 <input type="text" id="contact" name="contact">
             </div>
 
             <div class="section">
                 <h3>Health Data</h3>
-                <label for="reason">Reason(s) for the review:</label>
-                <input type="text" id="reason" name="reason">
+                <h3>Reasons for Review</h3>
+                    <p>You can select multiple answers:</p>
+
+                    <input type="checkbox" id="side_effects" name="reasons[]" value="Side effects">
+                    <label for="side_effects">Side effects</label><br>
+
+                    <input type="checkbox" id="unhappiness" name="reasons[]" value="Unhappiness with medication">
+                    <label for="unhappiness">Unhappiness with medication</label><br>
+
+                    <input type="checkbox" id="med_changes" name="reasons[]" value="Recent medication changes">
+                    <label for="med_changes">Recent medication changes</label><br>
+
+                    <input type="checkbox" id="insecurity" name="reasons[]" value="Insecurity">
+                    <label for="insecurity">Insecurity</label><br>
+
+                    <input type="checkbox" id="review" name="reasons[]" value="Wish for a review">
+                    <label for="review">Wish for a review</label><br>
+
+                    <input type="checkbox" id="simplify" name="reasons[]" value="Wish to simplify intake">
+                    <label for="simplify">Wish to simplify intake</label><br>
+
+                    <input type="checkbox" id="other" name="reasons[]" value="Other reason">
+                    <label for="other">Other reason</label><br>
 
                 <label for="concerns">Concerns:</label>
                 <input type="text" id="concerns" name="concerns">
