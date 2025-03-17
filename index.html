@@ -11,13 +11,16 @@
 
     <div class="main-container">
         <h2>Medication Review Form</h2>
-        <form id="myForm" ">
+        <form id="myForm" class="needs-validation" novalidate>
         <div class="main-section">
             <div class="second-section">
                 <h4>Master Data</h4>
                 <div class="area half-area">
                     <label>What is your full name?</label>
-                    <input id="contact" class="form-control" type="text" />
+                    <input id="contact" class="form-control" type="text" required>
+                    <div class="invalid-feedback">
+                      Please fill out.
+                    </div>
                 </div>
 
                 <div class="area">
@@ -31,13 +34,13 @@
                       </label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
                       <label class="form-check-label" for="flexRadioDefault2">
                         Male
                       </label>
                     </div>
                      <div class="form-check">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
                       <label class="form-check-label" for="flexRadioDefault2">
                         Diverse
                       </label>
@@ -51,7 +54,7 @@
 
                 <div class="area half-area">
                     <label>Provide an email or phone number where we can contact you.</label>
-                    <input id="contact" class="form-control" type="text" />
+                    <input id="contact" class="form-control" type="text" required>
                 </div>
             </div>
 
@@ -87,17 +90,17 @@
 
                 <div class="area half-area">
                     <label>Are there any specific health or medication concerns you’d like to focus on?</label>
-                    <textarea id="contact" class="form-control"rows="3"></textarea>
+                    <textarea id="contact" class="form-control"rows="3" required></textarea>
                 </div>
 
                 <div class="area half-area">
                     <label for="height">What is your height (in cm)?</label>
-                    <input class="form-control" type="text" id="height" name="height">
+                    <input class="form-control" type="text" id="height" name="height" required>
                 </div>
 
                 <div class="area half-area">
                     <label for="weight">What is your weight (in kilograms)?</label>
-                    <input class="form-control" type="text" id="weight" name="weight">
+                    <input class="form-control" type="text" id="weight" name="weight" required>
                 </div>
 
                 <div class="area half-area">
@@ -125,7 +128,7 @@
 
                 <div class="area half-area">
                     <label for="conditions">What pre-existing conditions do you have?</label>
-                    <input class="form-control" type="text" id="conditions" name="conditions">
+                    <input class="form-control" type="text" id="conditions" name="conditions" required>
                 </div>
 
                 <div class="area half-area">
@@ -276,17 +279,17 @@
 
                 <div class="area half-area">
                     <label for="med_name">Please enter the name of one of the medication.</label>
-                    <input class="form-control" type="text" id="med_name" name="med_name">
+                    <input class="form-control" type="text" id="med_name" name="med_name" required>
                 </div>
 
                 <div class="area half-area">
                     <label for="med_strength">In what strength are you taking it? For example: 8mg.</label>
-                    <input class="form-control" type="text" id="med_strength" name="med_strength">
+                    <input class="form-control" type="text" id="med_strength" name="med_strength" required>
                 </div>
 
                 <div class="area half-area">
                     <label for="med_dose">When and at what dose do you take it? For example, one pill in the morning and one in the evening.</label>
-                    <input class="form-control" type="text" id="med_dose" name="med_dose">
+                    <input class="form-control" type="text" id="med_dose" name="med_dose" required>
                 </div>
 
                 <div class="area half-area">
@@ -319,12 +322,12 @@
 
                 <div class="area half-area">
                     <label for="med_time">How long have you been taking the medication? For example: for one year.</label>
-                    <input class="form-control" type="text" id="med_time" name="med_time">
+                    <input class="form-control" type="text" id="med_time" name="med_time" required>
                 </div>
 
                 <div class="area half-area">
                     <label for="med_indication">What are you using the medication for or against?</label>
-                    <input class="form-control" type="text" id="med_indication" name="med_indication">
+                    <input class="form-control" type="text" id="med_indication" name="med_indication" required>
                 </div>
 
                 <div class="area half-area">
@@ -409,12 +412,12 @@
 
                 <div class="area half-area">
                     <label for="med_problems">Do you have any complaints or problems that you associate with the use of this medication?</label>
-                    <input class="form-control" type="text" id="med_problems" name="med_problems">
+                    <input class="form-control" type="text" id="med_problems" name="med_problems" required>
                 </div>
 
                 <div class="area half-area">
                     <label for="med_storage">How are you storing the medication?</label>
-                    <input class="form-control" type="text" id="med_storage" name="med_storage">
+                    <input class="form-control" type="text" id="med_storage" name="med_storage" required>
                 </div>
             </div>
 
@@ -422,17 +425,17 @@
                 <h4>Non-prescribed Medication</h4>
                 <div class="area half-area">
                     <label for="med_name">Please enter the name of one of the medication.</label>
-                    <input class="form-control" type="text" id="med_name" name="med_name">
+                    <input class="form-control" type="text" id="med_name" name="med_name" required>
                 </div>
 
                 <div class="area half-area">
                     <label for="med_strength">In what strength are you taking it? For example: 8mg.</label>
-                    <input class="form-control" type="text" id="med_strength" name="med_strength">
+                    <input class="form-control" type="text" id="med_strength" name="med_strength" required>
                 </div>
 
                 <div class="area half-area">
                     <label for="med_dose">When and at what dose do you take it? For example, one pill in the morning and one in the evening.</label>
-                    <input class="form-control" type="text" id="med_dose" name="med_dose">
+                    <input class="form-control" type="text" id="med_dose" name="med_dose" required>
                 </div>
 
                 <div class="area half-area">
@@ -465,12 +468,12 @@
 
                 <div class="area half-area">
                     <label for="med_time">How long have you been taking the medication? For example: for one year.</label>
-                    <input class="form-control" type="text" id="med_time" name="med_time">
+                    <input class="form-control" type="text" id="med_time" name="med_time" required>
                 </div>
 
                 <div class="area half-area">
                     <label for="med_indication">What are you using the medication for or against?</label>
-                    <input class="form-control" type="text" id="med_indication" name="med_indication">
+                    <input class="form-control" type="text" id="med_indication" name="med_indication" required>
                 </div>
 
                 <div class="area half-area">
@@ -498,12 +501,12 @@
 
                 <div class="area half-area">
                     <label for="med_problems">Do you have any complaints or problems that you associate with the use of this medication?</label>
-                    <input class="form-control" type="text" id="med_problems" name="med_problems">
+                    <input class="form-control" type="text" id="med_problems" name="med_problems" required>
                 </div>
 
                 <div class="area half-area">
                     <label for="med_storage">How are you storing the medication?</label>
-                    <input class="form-control" type="text" id="med_storage" name="med_storage">
+                    <input class="form-control" type="text" id="med_storage" name="med_storage" required>
                 </div>
 
                 <div class="area half-area">
@@ -555,6 +558,27 @@
                 this.style.display = "none"; // Hide the form
                 document.getElementById("message").style.display = "block"; // Show the message
             });
+
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+              'use strict'
+
+              // Fetch all the forms we want to apply custom Bootstrap validation styles to
+              var forms = document.querySelectorAll('.needs-validation')
+
+              // Loop over them and prevent submission
+              Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                  form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                      event.preventDefault()
+                      event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                  }, false)
+                })
+            })()
         </script>
     </div>
 
