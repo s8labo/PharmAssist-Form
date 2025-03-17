@@ -3,15 +3,40 @@
             margin: 30px;
             background-color: #f4f4f4;
         }
-        .container {
-            max-width: 600px;
+        .main-container {
+            max-width: 1000px;
             background: white;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             margin: auto;
         }
-        h2 {
+        .main-section {
+            margin-bottom: 20px;
+            padding: 10px;
+            background: #f9f9f9;
+            border-left: 5px solid #28a745;
+        }
+        .second-section {
+            margin-bottom: 30px;
+        }
+        .area {
+            margin-bottom: 15px;
+        }
+
+        .half-area {
+            width: 48%;
+        }
+
+        h4 {
+            margin-bottom: 20px!important;
+            margin-top: 30px;
+        }
+
+        .no-margin {
+            margin-bottom: 5px!important;
+        }
+        /*h2 {
             text-align: center;
             color: #333;
         }
@@ -40,24 +65,24 @@
         button:hover {
             background-color: #218838;
         }
-        .section {
-            margin-bottom: 20px;
-            padding: 10px;
-            background: #f9f9f9;
-            border-left: 5px solid #28a745;
-        }
 
         .name-fields {
             display: flex;
-            gap: 10px;
+            gap: 50px;
         }
 
         .name-fields input {
             flex: 1;
         }
 
-        .gender-options {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
+.gender-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Ensures equal spacing 
+}
+
+.gender-options label {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Consistent spacing between radio button and text 
+}*/*/*/

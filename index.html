@@ -4,178 +4,558 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Medication Review Form</title> 
 </head>
 <body>
 
-    <div class="container">
+    <div class="main-container">
         <h2>Medication Review Form</h2>
-        <form action="submit.php" method="POST">
-            
-            <div class="section">
-                <h3>Master Data</h3>
-                <div class="name-fields">
-                    <div>
-                        <label for="first_name">First Name:</label>
-                        <input type="text" id="first_name" name="first_name">
+        <form id="myForm" ">
+        <div class="main-section">
+            <div class="second-section">
+                <h4>Master Data</h4>
+                <div class="area half-area">
+                    <label>What is your full name?</label>
+                    <input id="contact" class="form-control" type="text" />
+                </div>
+
+                <div class="area">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Which gender do you identify with?
+                      </label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Female
+                      </label>
                     </div>
-                    <div>
-                        <label for="last_name">Last Name:</label>
-                        <input type="text" id="last_name" name="last_name">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Male
+                      </label>
+                    </div>
+                     <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Diverse
+                      </label>
                     </div>
                 </div>
 
-                <label>Gender:</label>
-                <div class="gender-options">
-                    <input type="radio" id="male" name="gender" value="male">
-                    <label for="male">Male</label>
+                <div class="area half-area">
+                    <label for="startDate">Please enter your date of birth.</label>
+                    <input id="startDate" class="form-control" type="date" value="1965-10-12"/>
+                </div>
 
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female">Female</label>
+                <div class="area half-area">
+                    <label>Provide an email or phone number where we can contact you.</label>
+                    <input id="contact" class="form-control" type="text" />
+                </div>
+            </div>
 
-                    <input type="radio" id="other" name="gender" value="other">
-                    <label for="other">Diverse</label>
+            <div class="second-section">
+                <h4>Health Data</h4>
+                <div class="area half-area">
+                    <h6>Why you would like to do a medication review?</h6>
+                        <p>You can select multiple answers:</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="side_effects" name="reasons[]" value="Side effects">
+                        <label for="side_effects">Side effects</label><br>
+
+                        <input class="form-check-input" type="checkbox" id="unhappiness" name="reasons[]" value="Unhappiness with medication">
+                        <label for="unhappiness">Unhappiness with medication</label><br>
+
+                        <input class="form-check-input" type="checkbox" id="med_changes" name="reasons[]" value="Recent medication changes">
+                        <label for="med_changes">Recent medication changes, e.g due to hospitalization</label><br>
+
+                        <input class="form-check-input" type="checkbox" id="insecurity" name="reasons[]" value="Insecurity">
+                        <label for="insecurity">Insecurity</label><br>
+
+                        <input class="form-check-input" type="checkbox" id="review" name="reasons[]" value="Wish for a review">
+                        <label for="review">Wish for a review</label><br>
+
+                        <input class="form-check-input" type="checkbox" id="simplify" name="reasons[]" value="Wish to simplify intake">
+                        <label for="simplify">Wish to simplify intake</label><br>
+
+                        <input class="form-check-input" type="checkbox" id="other" name="reasons[]" value="Other reason">
+                        <label for="other">Other reason:</label><br>
+                        <input class="form-control" type="text" id="other_reason_input" name="other_reason" placeholder="What is the other reason?">
+                    </div>
+                </div>
+
+                <div class="area half-area">
+                    <label>Are there any specific health or medication concerns you’d like to focus on?</label>
+                    <textarea id="contact" class="form-control"rows="3"></textarea>
+                </div>
+
+                <div class="area half-area">
+                    <label for="height">What is your height (in cm)?</label>
+                    <input class="form-control" type="text" id="height" name="height">
+                </div>
+
+                <div class="area half-area">
+                    <label for="weight">What is your weight (in kilograms)?</label>
+                    <input class="form-control" type="text" id="weight" name="weight">
+                </div>
+
+                <div class="area half-area">
+                    <label for="allergies">Do you have allergies or intolerances?</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Yes:
+                      </label>
+                      <input class="form-control" type="text" id="other_reason_input" name="other_reason" placeholder="Which ones?">
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        No
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        I'm not sure
+                      </label>
+                    </div>
+                </div>
+
+                <div class="area half-area">
+                    <label for="conditions">What pre-existing conditions do you have?</label>
+                    <input class="form-control" type="text" id="conditions" name="conditions">
+                </div>
+
+                <div class="area half-area">
+                    <label for="allergies">Do you have any known renal or hepatic insufficiency?</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        No
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        I'm not sure
+                      </label>
+                    </div>
                 </div>
 
 
-                <label for="dob">Date of Birth:</label>
-                <input type="date" id="dob" name="dob">
+                <div class="area half-area">
+                    <label for="allergies">Are you being treated by several doctors?</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Yes:
+                      </label>
+                      <input class="form-control" type="text" id="other_reason_input" name="other_reason" placeholder="Are you also prescribed medication by these doctors?">
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        No
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        I'm not sure
+                      </label>
+                    </div>
+                </div>
 
-                <label for="contact">Please provide an email or phone number:</label>
-                <input type="text" id="contact" name="contact">
+                <div class="area half-area">
+                    <label for="allergies">Do you have a current medication plan?</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Yes:
+                      </label>
+                      <input class="form-control" type="text" id="other_reason_input" name="other_reason" placeholder="Are you also prescribed medication by these doctors?">
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        No
+                      </label>
+                    </div>
+                </div>
+
+                <div class="area half-area">
+                    <label for="allergies">Do you take your medication with any food or drinks?</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        No
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        (Tap-) water or mineral water
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Grapefruit juice
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Alcohol
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Coffee or tea
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Milk or dairy products
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Others
+                      </label>
+                    </div>
+                </div>
+
+                <div class="area half-area">
+                    <label for="allergies">Do you feel sufficiently informed about your medication?</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        No
+                      </label>
+                    </div>
+                </div>
+
+                <div class="area half-area">
+                    <label for="allergies">Do you receive support in taking the medication?</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        No
+                      </label>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="section">
-                <h3>Health Data</h3>
-                <h3>Reasons for Review</h3>
-                    <p>You can select multiple answers:</p>
+            <div class="second-section">
+                <h4>Prescribed Medication</h4>
 
-                    <input type="checkbox" id="side_effects" name="reasons[]" value="Side effects">
-                    <label for="side_effects">Side effects</label><br>
+                <div class="area half-area">
+                    <label for="med_name">Please enter the name of one of the medication.</label>
+                    <input class="form-control" type="text" id="med_name" name="med_name">
+                </div>
 
-                    <input type="checkbox" id="unhappiness" name="reasons[]" value="Unhappiness with medication">
-                    <label for="unhappiness">Unhappiness with medication</label><br>
+                <div class="area half-area">
+                    <label for="med_strength">In what strength are you taking it? For example: 8mg.</label>
+                    <input class="form-control" type="text" id="med_strength" name="med_strength">
+                </div>
 
-                    <input type="checkbox" id="med_changes" name="reasons[]" value="Recent medication changes">
-                    <label for="med_changes">Recent medication changes</label><br>
+                <div class="area half-area">
+                    <label for="med_dose">When and at what dose do you take it? For example, one pill in the morning and one in the evening.</label>
+                    <input class="form-control" type="text" id="med_dose" name="med_dose">
+                </div>
 
-                    <input type="checkbox" id="insecurity" name="reasons[]" value="Insecurity">
-                    <label for="insecurity">Insecurity</label><br>
+                <div class="area half-area">
+                    <label for="allergies">How do you take this medication?</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Before a meal
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        With a meal
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        After a meal
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Independent of a meal
+                      </label>
+                    </div>
+                </div>
 
-                    <input type="checkbox" id="review" name="reasons[]" value="Wish for a review">
-                    <label for="review">Wish for a review</label><br>
+                <div class="area half-area">
+                    <label for="med_time">How long have you been taking the medication? For example: for one year.</label>
+                    <input class="form-control" type="text" id="med_time" name="med_time">
+                </div>
 
-                    <input type="checkbox" id="simplify" name="reasons[]" value="Wish to simplify intake">
-                    <label for="simplify">Wish to simplify intake</label><br>
+                <div class="area half-area">
+                    <label for="med_indication">What are you using the medication for or against?</label>
+                    <input class="form-control" type="text" id="med_indication" name="med_indication">
+                </div>
 
-                    <input type="checkbox" id="other" name="reasons[]" value="Other reason">
-                    <label for="other">Other reason</label><br>
+                <div class="area half-area">
+                    <label for="med_prescription">Are you taking the medication exactly as prescribed?</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        No:
+                      </label>
+                      <input class="form-control" type="text" id="other_reason_input" name="other_reason" placeholder="Why and how are you taking it differently?">
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        I'm not sure
+                      </label>
+                    </div>
+                </div>
 
-                <label for="concerns">Concerns:</label>
-                <input type="text" id="concerns" name="concerns">
+                <div class="area half-area">
+                    <label for="med_forgotten">Everyone forgets something once in a while. How often have you forgotten to take your medication in the last month?</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Never
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        1-2 times
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        3-5 times
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        More than 5 times
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        I do not take any medication regularly
+                      </label>
+                    </div>
+                </div>
 
-                <label for="height">Height:</label>
-                <input type="text" id="height" name="height">
+                <div class="area half-area">
+                    <label for="med_prescription">Do you think the medication is effective?</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        No:
+                      </label>
+                      <input class="form-control" type="text" id="other_reason_input" name="other_reason" placeholder="Why and how are you taking it differently?">
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        I'm not sure
+                      </label>
+                    </div>
+                </div>
 
-                <label for="weight">Weight:</label>
-                <input type="text" id="weight" name="weight">
+                <div class="area half-area">
+                    <label for="med_problems">Do you have any complaints or problems that you associate with the use of this medication?</label>
+                    <input class="form-control" type="text" id="med_problems" name="med_problems">
+                </div>
 
-                <label for="allergies">Allergies/Intolerances:</label>
-                <input type="text" id="allergies" name="allergies">
-
-                <label for="conditions">Conditions:</label>
-                <input type="text" id="conditions" name="conditions">
-
-                <label for="renal">Renal/Hepatic Insufficiency:</label>
-                <input type="text" id="renal" name="renal">
-
-                <label for="doctors">Multiple Doctors:</label>
-                <input type="text" id="doctors" name="doctors">
-
-                <label for="mediplan">Medication Plan:</label>
-                <input type="text" id="mediplan" name="mediplan">
-
-                <label for="info">Sufficiently Informed:</label>
-                <input type="text" id="info" name="info">
-
-                <label for="support">Support:</label>
-                <input type="text" id="support" name="support">
-
-                <label for="food">Food:</label>
-                <input type="text" id="food" name="food">
+                <div class="area half-area">
+                    <label for="med_storage">How are you storing the medication?</label>
+                    <input class="form-control" type="text" id="med_storage" name="med_storage">
+                </div>
             </div>
 
-            <div class="section">
-                <h3>Medication</h3>
-                <label for="med_name">Name:</label>
-                <input type="text" id="med_name" name="med_name">
+            <div class="second-section">
+                <h4>Non-prescribed Medication</h4>
+                <div class="area half-area">
+                    <label for="med_name">Please enter the name of one of the medication.</label>
+                    <input class="form-control" type="text" id="med_name" name="med_name">
+                </div>
 
-                <label for="med_strength">Strength:</label>
-                <input type="text" id="med_strength" name="med_strength">
+                <div class="area half-area">
+                    <label for="med_strength">In what strength are you taking it? For example: 8mg.</label>
+                    <input class="form-control" type="text" id="med_strength" name="med_strength">
+                </div>
 
-                <label for="med_dose">Time and Dose:</label>
-                <input type="text" id="med_dose" name="med_dose">
+                <div class="area half-area">
+                    <label for="med_dose">When and at what dose do you take it? For example, one pill in the morning and one in the evening.</label>
+                    <input class="form-control" type="text" id="med_dose" name="med_dose">
+                </div>
 
-                <label for="med_meal">Intake with Meal:</label>
-                <input type="text" id="med_meal" name="med_meal">
+                <div class="area half-area">
+                    <label for="allergies">How do you take this medication?</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Before a meal
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        With a meal
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        After a meal
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Independent of a meal
+                      </label>
+                    </div>
+                </div>
 
-                <label for="med_time">Intake Time:</label>
-                <input type="text" id="med_time" name="med_time">
+                <div class="area half-area">
+                    <label for="med_time">How long have you been taking the medication? For example: for one year.</label>
+                    <input class="form-control" type="text" id="med_time" name="med_time">
+                </div>
 
-                <label for="med_indication">Indication:</label>
-                <input type="text" id="med_indication" name="med_indication">
+                <div class="area half-area">
+                    <label for="med_indication">What are you using the medication for or against?</label>
+                    <input class="form-control" type="text" id="med_indication" name="med_indication">
+                </div>
 
-                <label for="med_prescription">Intake as Prescribed:</label>
-                <input type="text" id="med_prescription" name="med_prescription">
+                <div class="area half-area">
+                    <label for="med_prescription">Do you think the medication is effective?</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        No:
+                      </label>
+                      <input class="form-control" type="text" id="other_reason_input" name="other_reason" placeholder="Why and how are you taking it differently?">
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        I'm not sure
+                      </label>
+                    </div>
+                </div>
 
-                <label for="med_forgotten">Forgotten Intake:</label>
-                <input type="text" id="med_forgotten" name="med_forgotten">
+                <div class="area half-area">
+                    <label for="med_problems">Do you have any complaints or problems that you associate with the use of this medication?</label>
+                    <input class="form-control" type="text" id="med_problems" name="med_problems">
+                </div>
 
-                <label for="med_effectiveness">Effectiveness:</label>
-                <input type="text" id="med_effectiveness" name="med_effectiveness">
+                <div class="area half-area">
+                    <label for="med_storage">How are you storing the medication?</label>
+                    <input class="form-control" type="text" id="med_storage" name="med_storage">
+                </div>
 
-                <label for="med_problems">Problems or Comments:</label>
-                <input type="text" id="med_problems" name="med_problems">
-
-                <label for="med_storage">Storage:</label>
-                <input type="text" id="med_storage" name="med_storage">
+                <div class="area half-area">
+                    <label for="med_prescription">Who recommended the medication to you?</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Doctor
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Friends or family
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Advertising
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Nobody
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Others
+                      </label>
+                    </div>
+                </div>
             </div>
 
-            <div class="section">
-                <h3>OTC Medication</h3>
-                <label for="otc_name">Name:</label>
-                <input type="text" id="otc_name" name="otc_name">
-
-                <label for="otc_strength">Strength:</label>
-                <input type="text" id="otc_strength" name="otc_strength">
-
-                <label for="otc_dose">Time and Dose:</label>
-                <input type="text" id="otc_dose" name="otc_dose">
-
-                <label for="otc_meal">Intake with Meal:</label>
-                <input type="text" id="otc_meal" name="otc_meal">
-
-                <label for="otc_time">Intake Time:</label>
-                <input type="text" id="otc_time" name="otc_time">
-
-                <label for="otc_indication">Indication:</label>
-                <input type="text" id="otc_indication" name="otc_indication">
-
-                <label for="otc_effectiveness">Effectiveness:</label>
-                <input type="text" id="otc_effectiveness" name="otc_effectiveness">
-
-                <label for="otc_problems">Problems or Comments:</label>
-                <input type="text" id="otc_problems" name="otc_problems">
-
-                <label for="otc_storage">Storage:</label>
-                <input type="text" id="otc_storage" name="otc_storage">
-
-                <label for="otc_recommendation">Recommendation:</label>
-                <input type="text" id="otc_recommendation" name="otc_recommendation">
+            <div class="d-grid gap-2 col-6">
+                <button type="submit" class="btn btn-success">Submit</button>
             </div>
-
-            <button type="submit">Confirm</button>
+        </div>
         </form>
+
+        <p id="message" style="display: none;">Thank you! Your form has been submitted. You can continue with the study, the keyword is "completed".</p>
+
+        <script>
+            document.getElementById("myForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent actual form submission
+                this.style.display = "none"; // Hide the form
+                document.getElementById("message").style.display = "block"; // Show the message
+            });
+        </script>
     </div>
 
 </body>
