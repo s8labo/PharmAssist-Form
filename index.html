@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <title>Medication Review Form</title> 
 </head>
 <body>
 
     <div class="container">
-        <h2>Medical Review Form</h2>
+        <h2>Medication Review Form</h2>
         <form action="submit.php" method="POST">
             
             <div class="section">
                 <h3>Master Data</h3>
-                <label for="name">First and lastname:</label>
-                <input type="text" id="name" name="name">
+                  <div class="form-row">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="First name">
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Last name">
+                    </div>
+                  </div>
 
                 <label>Gender:</label>
                 <input type="radio" id="male" name="gender" value="male">
