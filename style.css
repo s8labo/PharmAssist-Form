@@ -1,88 +1,35 @@
-        body {
-            font-family: Arial, sans-serif;
-            margin: 30px;
-            background-color: #f4f4f4;
-        }
-        .main-container {
-            max-width: 1000px;
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin: auto;
-        }
-        .main-section {
-            margin-bottom: 20px;
-            padding: 10px;
-            background: #f9f9f9;
-            border-left: 5px solid cornflowerblue;
-        }
-        .second-section {
-            margin-bottom: 30px;
-        }
-        .area {
-            margin-bottom: 15px;
-        }
-
-        .half-area {
-            width: 48%;
-        }
-
-        h4 {
-            margin-bottom: 20px!important;
-            margin-top: 30px;
-        }
-
-        .no-margin {
-            margin-bottom: 5px!important;
-        }
-        /*h2 {
-            text-align: center;
-            color: #333;
-        }
-        label {
-            font-weight: bold;
-            margin-top: 10px;
-            display: block;
-        }
-        input, textarea {
-            width: 100%;
-            padding: 8px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        button {
-            background-color: #28a745;
-            color: white;
-            padding: 10px;
-            border: none;
-            width: 100%;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 15px;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-
-        .name-fields {
-            display: flex;
-            gap: 50px;
-        }
-
-        .name-fields input {
-            flex: 1;
-        }
-
-.gender-options {
-    display: flex;
-    flex-direction: column;
-    gap: 8px; /* Ensures equal spacing 
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background-color: #f4f4f4;
 }
-
-.gender-options label {
-    display: flex;
-    align-items: center;
-    gap: 8px; /* Consistent spacing between radio button and text 
-}*/*/*/
+.main-container {
+    max-width: 800px;
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+.main-section {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-left: 5px solid cornflowerblue;
+}
+.second-section {
+    margin-bottom: 30px;
+}
+.area {
+    margin-bottom: 15px;
+}
+.half-area {
+    width: 84%;
+}
+h4 {
+    margin-bottom: 20px!important;
+    margin-top: 30px;
+}
+.no-margin {
+    margin-bottom: 5px!important;
+}
