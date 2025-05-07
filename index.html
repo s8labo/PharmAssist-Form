@@ -48,6 +48,15 @@
                     <label for="birthdate">Please enter your date of birth.</label>
                     <input id="birthdate" class="form-control" type="date" value="1965-10-12"/>
                 </div>
+                 <div class="area half-area">
+                    <label for="height">What is your height?</label>
+                    <input class="form-control" type="text" id="height" name="height" required>
+                </div>
+
+                <div class="area half-area">
+                    <label for="weight">What is your weight?</label>
+                    <input class="form-control" type="text" id="weight" name="weight" required>
+                </div>
 
                 <div class="area half-area">
                     <label>Provide an email or phone number where we can contact you.</label>
@@ -67,7 +76,7 @@
                         <label for="unhappiness">Unhappiness with medication</label><br>
 
                         <input class="form-check-input" type="checkbox" id="med_changes" name="reasons[]" value="Recent medication changes">
-                        <label for="med_changes">Recent medication changes, e.g due to hospitalization</label><br>
+                        <label for="med_changes">Recent medication changes</label><br>
 
                         <input class="form-check-input" type="checkbox" id="insecurity" name="reasons[]" value="Insecurity">
                         <label for="insecurity">Insecurity</label><br>
@@ -89,16 +98,7 @@
                     <textarea id="concerns" class="form-control"rows="3" required></textarea>
                 </div>
 
-                <div class="area half-area">
-                    <label for="height">What is your height?</label>
-                    <input class="form-control" type="text" id="height" name="height" required>
-                </div>
-
-                <div class="area half-area">
-                    <label for="weight">What is your weight?</label>
-                    <input class="form-control" type="text" id="weight" name="weight" required>
-                </div>
-
+              
                 <div class="area half-area">
                     <label for="allergies">Do you have allergies or intolerances?</label>
                     <div class="form-check">
@@ -190,52 +190,6 @@
                 </div>
 
                 <div class="area half-area">
-                    <label for="foods">Do you take your medication with any food or drinks?<br>(You can select multiple answers)</label>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="foods" id="flexRadioDefault15">
-                      <label class="form-check-label" for="flexRadioDefault15">
-                        No
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="foods" id="flexRadioDefault16">
-                      <label class="form-check-label" for="flexRadioDefault16">
-                        (Tap-) water or mineral water
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="foods" id="flexRadioDefault17">
-                      <label class="form-check-label" for="flexRadioDefault17">
-                        Grapefruit juice
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="foods" id="flexRadioDefault18">
-                      <label class="form-check-label" for="flexRadioDefault18">
-                        Alcohol
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="foods" id="flexRadioDefault19">
-                      <label class="form-check-label" for="flexRadioDefault19">
-                        Coffee or tea
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="foods" id="flexRadioDefault20">
-                      <label class="form-check-label" for="flexRadioDefault20">
-                        Milk or dairy products
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="foods" id="flexRadioDefault21">
-                      <label class="form-check-label" for="flexRadioDefault21">
-                        Others
-                      </label>
-                    </div>
-                </div>
-
-                <div class="area half-area">
                     <label for="info">Do you feel sufficiently informed about your medication?</label>
                     <div class="form-check">
                       <input class="form-check-input" type="radio" name="info" id="flexRadioDefault22">
@@ -311,6 +265,52 @@
                       <input class="form-check-input" type="radio" name="med_intake" id="flexRadioDefault29">
                       <label class="form-check-label" for="flexRadioDefault29">
                         Independent of a meal
+                      </label>
+                    </div>
+                </div>
+
+                <div class="area half-area">
+                    <label for="foods">Do you take your medication with any of these drinks or foods, or anything you think could interfere with the medication?<br>(You can select multiple answers)</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="foods" id="flexRadioDefault15">
+                      <label class="form-check-label" for="flexRadioDefault15">
+                        No
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="foods" id="flexRadioDefault16">
+                      <label class="form-check-label" for="flexRadioDefault16">
+                        (Tap-) water or mineral water
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="foods" id="flexRadioDefault17">
+                      <label class="form-check-label" for="flexRadioDefault17">
+                        Grapefruit juice
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="foods" id="flexRadioDefault18">
+                      <label class="form-check-label" for="flexRadioDefault18">
+                        Alcohol
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="foods" id="flexRadioDefault19">
+                      <label class="form-check-label" for="flexRadioDefault19">
+                        Coffee or tea
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="foods" id="flexRadioDefault20">
+                      <label class="form-check-label" for="flexRadioDefault20">
+                        Milk or dairy products
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="foods" id="flexRadioDefault21">
+                      <label class="form-check-label" for="flexRadioDefault21">
+                        Others
                       </label>
                     </div>
                 </div>
@@ -456,6 +456,52 @@
                       <input class="form-check-input" type="radio" name="otcmed_intake" id="flexRadioDefault44">
                       <label class="form-check-label" for="flexRadioDefault44">
                         Independent of a meal
+                      </label>
+                    </div>
+                </div>
+
+                <div class="area half-area">
+                    <label for="foods">Do you take your medication with any of these drinks or foods, or anything you think could interfere with the medication?<br>(You can select multiple answers)</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="foods" id="flexRadioDefault15">
+                      <label class="form-check-label" for="flexRadioDefault15">
+                        No
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="foods" id="flexRadioDefault16">
+                      <label class="form-check-label" for="flexRadioDefault16">
+                        (Tap-) water or mineral water
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="foods" id="flexRadioDefault17">
+                      <label class="form-check-label" for="flexRadioDefault17">
+                        Grapefruit juice
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="foods" id="flexRadioDefault18">
+                      <label class="form-check-label" for="flexRadioDefault18">
+                        Alcohol
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="foods" id="flexRadioDefault19">
+                      <label class="form-check-label" for="flexRadioDefault19">
+                        Coffee or tea
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="foods" id="flexRadioDefault20">
+                      <label class="form-check-label" for="flexRadioDefault20">
+                        Milk or dairy products
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="foods" id="flexRadioDefault21">
+                      <label class="form-check-label" for="flexRadioDefault21">
+                        Others
                       </label>
                     </div>
                 </div>
